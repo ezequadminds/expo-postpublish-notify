@@ -11,7 +11,7 @@
 //   log: (msg) => void, // Call this function to log to exp/
 // }
 
-module.exports = ({ url, iosManifest, config }) => {
+module.exports = async ({ url, iosManifest, config }) => {
   const { webhookUrl } = config;
   const axios = require('axios');
   console.log('Running notify hook');
