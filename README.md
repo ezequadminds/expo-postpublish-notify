@@ -1,24 +1,20 @@
-# expo-postpublish-slack-notify
+# expo-postpublish-notify
 
-Post a notification on Slack whenever your project is published.
-Presumably you already know this is happening so it's probably more
-useful to non-you people, such as your team or your grandparents.
+Post a notification on an incoming webhook
 
 ## Installation
 
-1. [Create an incoming webhook](https://api.slack.com/incoming-webhooks) and keep the window open with the URL.
-2. `yarn add expo-postpublish-slack-notify` in your project.
+1. [Create an incoming webhook]
+2. `add expo-postpublish-notify` in your project.
 3. Add the following to your `app.json` within the "expo" key.
 
 ```javascript
   "hooks": {
     "postPublish": [
       {
-        "file": "expo-postpublish-slack-notify",
+        "file": "expo-postpublish-notify",
         "config": {
           "webhookUrl": "your webhook url here",
-          "username": "thisIsOptionalAndIsAValidSlackUsername",
-          "channel": "#channel_other_than_default"
         }
       }
     ]
